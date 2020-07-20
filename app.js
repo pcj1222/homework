@@ -1,3 +1,16 @@
+function fizzBuzz(number){
+    if( number % 3 === 0 && number % 5 === 0 ){
+        return "FizzBuzz"
+    }else if ( number % 3 === 0 ){
+        return "Fizz"
+    }else if( number % 5 === 0 ){
+        return "Buzz"
+    }else{
+        return number;
+    }
+}
+
+
 //  loop 함수 구현
 function loop( clientFunc, maxNumber ){
     let count = 1;
@@ -21,13 +34,13 @@ function asyncLoop( clientFunc, maxNumber, time ){
         }
     }
     
-    setTimeout(() => {
-        func()
-    }, time);
-
-    // setInterval(() => {
+    // setTimeout(() => {
     //     func()
     // }, time);
+
+    setInterval(() => {
+        func()
+    }, time);
 }
 
 asyncLoop( function(i){
