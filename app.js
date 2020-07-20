@@ -1,7 +1,7 @@
 //  loop 함수 구현
 function loop( clientFunc, maxNumber ){
     let count = 1;
-    while(count < maxNumber){
+    while(count <= maxNumber){
         clientFunc(count)
         count++;
     }
@@ -15,7 +15,7 @@ loop(function(i){
 function asyncLoop( clientFunc, maxNumber, time ){
     function func(){
         let count = 1;
-        while( count < maxNumber ){
+        while( count <= maxNumber ){
             clientFunc(count)
             count++;
         }
