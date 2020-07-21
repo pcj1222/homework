@@ -33,11 +33,6 @@ function asyncLoop( clientFunc, maxNumber, time ){
             count++;
         }
     }
-    
-    // setTimeout(() => {
-    //     func()
-    // }, time);
-
     setInterval(() => {
         func()
     }, time);
@@ -46,3 +41,17 @@ function asyncLoop( clientFunc, maxNumber, time ){
 asyncLoop( function(i){
     console.log( fizzBuzz(i) )
 }, 5, 2000)
+
+
+// 다시 생각하고 한 버전
+function asyncLoop( clientFunc, maxNumber, time ){
+    for(let i=1; i<=maxNumber;i++){
+        setTimeout(() => {
+            clientFunc(i);
+        }, time * i);
+    }
+}
+
+asyncLoop( function(i){
+    console.log( fizzBuzz(i) )
+}, 5, 1000)
