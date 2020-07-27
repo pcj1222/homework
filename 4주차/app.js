@@ -13,6 +13,7 @@ function button(props) {
 
 function $(selector) {
     // TODO
+    // const $btn = document.querySelector(selector);  // 처음에 여기에 선언해서 this를 가져오지 못하는 문제로 한참 고민하다가 on함수에 넣어서 처리..
     const $this = selector;
 
     return {    
